@@ -2,6 +2,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\Modal;
 use yii\bootstrap\Tabs;
+use dosamigos\fileupload\FileUploadUI;
 ?>
 
 <?php Modal::begin([
@@ -25,7 +26,30 @@ use yii\bootstrap\Tabs;
             111111
         </div>
         <div id="images" class="tab-pane">
-            2222
+            <?= FileUploadUI::widget([
+                'model' => $model,
+                'attribute' => 'title',
+                'url' => ['media/upload', 'id' => $model->id],
+                'gallery' => false,
+                'fieldOptions' => [
+                    'accept' => 'image/*'
+                ],
+                'clientOptions' => [
+                    'maxFileSize' => 2000000
+                ],
+                // ...
+                'clientEvents' => [
+                    'fileuploaddone' => 'function(e, data) {
+                                    console.log(e);
+                                    console.log(data);
+                                }',
+                    'fileuploadfail' => 'function(e, data) {
+                                    console.log(e);
+                                    console.log(data);
+                                }',
+                ],
+            ]);?>
+
         </div>
         <div id="history" class="tab-pane">33333</div>
     </div>

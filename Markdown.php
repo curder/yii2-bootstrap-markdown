@@ -7,6 +7,8 @@ use yii\helpers\Json;
 class Markdown extends yii\widgets\InputWidget{
     public $language = 'zh';
     public $useUploadImage = false;
+    public $uploadImagePath = '';
+    public $model;
     public function init(){
         $this->options['data-provide']='markdown-textarea';
         parent::init();
@@ -62,7 +64,7 @@ JS;
             $html = Html::textarea($this->name,$this->value,$this->options);
         }
         if ($this->useUploadImage) {
-            $html .= $this->render('modal');
+            $html .= $this->render('modal',['model'=>$this->model]);
         }
         return $html;
     }

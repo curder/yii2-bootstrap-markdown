@@ -29,7 +29,7 @@ use dosamigos\fileupload\FileUploadUI;
             <?= FileUploadUI::widget([
                 'model' => $model,
                 'attribute' => 'title',
-                'url' => ['media/upload', 'id' => $model->id],
+                'url' => ['default/images-upload', 'id' => $model->id],
                 'gallery' => false,
                 'fieldOptions' => [
                     'accept' => 'image/*'

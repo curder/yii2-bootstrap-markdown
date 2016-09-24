@@ -1,0 +1,21 @@
+{
+    "name": "curder/yii2-bootstrap-markdown",
+    "description": "Yii2 Bootstrap Markdown Editor",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","bootstrap","markdown","editor"],
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "curder",
+            "email": "curder@foxmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "curder\\markdown\\": ""
+        }
+    }
+}

@@ -10,13 +10,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-composer require --prefer-dist curder/yii2-bootstrap-markdown "*"
+composer require --prefer-dist curder/yii2-bootstrap-markdown "dev-master"
 ```
 
 or add
 
 ```
-"curder/yii2-bootstrap-markdown": "*"
+"curder/yii2-bootstrap-markdown": "dev-master"
 ```
 
 to the require section of your `composer.json` file.

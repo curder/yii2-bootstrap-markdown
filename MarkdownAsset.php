@@ -5,9 +5,11 @@ class MarkdownAsset extends AssetBundle{
     public $language;
     public $css = [
         'css/bootstrap-markdown.min.css',
+        'css/upload.css'
     ];
     public $js = [
         'js/bootstrap-markdown.js',
+        'js/upload.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

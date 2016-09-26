@@ -13,6 +13,7 @@ use yii\web\UploadedFile;
 class Upload extends \yii\base\Action
 {
     public $driver;
+    public $image;
     /**
      * @var array
      */
@@ -38,7 +39,7 @@ class Upload extends \yii\base\Action
     }
     private function local()
     {
-        $uploader = UploadedFile::getInstanceByName('file');
+        $uploader = UploadedFile::getInstanceByName("image");
         $root = Yii::getAlias('@staticroot');
         $path = 'upload/image/' . date('Ymd') . '/';
         $dir = $root . '/' . $path;

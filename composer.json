@@ -13,8 +13,7 @@
     "require": {
         "yiisoft/yii2": "*",
         "qiniu/php-sdk":"*",
-        "2amigos/yii2-file-upload-widget":"~1.0",
-        "yidashi/yii2-webuploader":"*"
+        "2amigos/yii2-file-upload-widget":"~1.0"
     },
     "autoload": {
         "psr-4": {

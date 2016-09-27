@@ -36,7 +36,7 @@ jQuery(document).ready(function () {
                                         cursor = selected.start+1;
                                         e.setSelection(cursor,cursor+chunk.length);
                                     }
-                                } else if($('#upload').hasClass('active')) {
+                                } else if($('#upload').hasClass('active')) { // 上传文件
                                     var links = '';
                                     $('#upload .name a').each(function(){
                                         chunk = $(this).attr('title');

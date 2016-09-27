@@ -9,6 +9,5 @@ Modal::begin([
     'header' => '<h3>上传图片</h3>',
     'footer' => Html::button('插入', ['class' => 'btn btn-success', 'data-dismiss' => 'modal'])
 ]) ?>
-<?php // echo Webuploader::widget(['name' => 'markdown-image']) ?>
 
 <?php Modal::end() ?>

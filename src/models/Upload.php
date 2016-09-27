@@ -36,11 +36,6 @@ class Upload extends Model
     public $file;
 
     /**
-     * @var string
-     */
-    public $driver;
-
-    /**
      * @var string Web accessible path to the uploaded image
      */
     public $url;
@@ -120,7 +115,7 @@ class Upload extends Model
 
                 FileHelper::createDirectory($save_path);
 
-                $this->url = $this->domain . Yii::getAlias('@web/' . $dir . '/' . $this->fileName);
+                $this->url = Yii::getAlias('@web/' . $dir . '/' . $this->fileName);
                 if ($type == 'image') {
                     $this->image->saveAs(FileHelper::normalizePath($save_path . '/' . $this->fileName));
                 } else {
@@ -150,12 +145,12 @@ class Upload extends Model
         $files = FileHelper::findFiles($directory);
         $output = [];
         foreach ($files as $file) {
-            $path = $this->domain . Yii::getAlias('@web/' . $dir . DIRECTORY_SEPARATOR . basename($file));
+            $this->url = Yii::getAlias('@web/' . $dir . DIRECTORY_SEPARATOR . basename($file));
             $output['files'][] = [
                 'name' => basename($file),
                 'size' => filesize($file),
-                "url" => $path,
-                "thumbnailUrl" => $path,
+                "url" => $this->url,
+                "thumbnailUrl" => $this->url,
                 "deleteUrl" => 'image-delete?imageName=' . basename($file),
                 "deleteType" => "POST"
             ];

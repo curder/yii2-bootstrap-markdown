@@ -9,7 +9,7 @@ class MarkdownAsset extends AssetBundle{
     ];
     public $js = [
         'js/bootstrap-markdown.js',
-        'js/upload.js'
+        // 'js/upload.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

@@ -16,7 +16,7 @@ jQuery(document).ready(function () {
                 data: [{
                     name: "cmdUrl",
                     callback: function(e) {
-                        $.modalLoad("/upload/file", function(){
+                        $.modalLoad("/site/file-upload", function(){
                             $('.modal-title').text('插入链接');
                             $('#fileupload').fileupload();
                             $('.modal-footer').html('<button type="button" class="btn btn-success" data-dismiss="modal">插入</button> <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>');
@@ -36,7 +36,7 @@ jQuery(document).ready(function () {
                                         cursor = selected.start+1;
                                         e.setSelection(cursor,cursor+chunk.length);
                                     }
-                                } else if($('#upload').hasClass('active')) { // 上传文件
+                                } else if($('#upload').hasClass('active')) {
                                     var links = '';
                                     $('#upload .name a').each(function(){
                                         chunk = $(this).attr('title');
@@ -59,7 +59,7 @@ jQuery(document).ready(function () {
                 },{
                     name: "cmdImage",
                     callback: function(e) {
-                        $.modalLoad("/upload/image", function(){
+                        $.modalLoad("/site/image-upload", function(){
                             $('.modal-title').text('插入图片');
                             $('#fileupload').fileupload();
                             $('.modal-footer').html('<button type="button" class="btn btn-success" data-dismiss="modal">插入</button> <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>');

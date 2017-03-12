@@ -53,3 +53,6 @@ Or Use ActiveForm
         ...
     ]); ?>
 ```
+
+## DEMO
+![demo](https://raw.githubusercontent.com/curder/yii2-bootstrap-markdown/master/demo.jpg "demo")

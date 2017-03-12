@@ -1,7 +1,8 @@
 <?php
-namespace curder\markdown;
+namespace curder\markdown\widgets;
 use yii\web\AssetBundle;
 class MarkdownAsset extends AssetBundle{
+    public $sourcePath = '@vendor/curder/yii2-bootstrap-markdown/assets';
     public $language;
     public $css = [
         'css/bootstrap-markdown.min.css',
@@ -9,16 +10,16 @@ class MarkdownAsset extends AssetBundle{
     ];
     public $js = [
         'js/bootstrap-markdown.js',
+        'js/markdown.js',
         // 'js/upload.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
-        'curder\markdown\Markdown2HtmlAsset',
     ];
     public function init()
     {
-        $this->sourcePath = __DIR__ . '/assets';
+        $this->sourcePath = __DIR__ . '/../assets';
         parent::init();
     }
 }

@@ -14,4 +14,12 @@
 .fileupload-progress{
     height:10px;
 }
-
+#image_history ul li{float:left;
+    list-style-type: none;
+    margin-right: 5px;}
+#image_history ul img {
+    width:160px;
+}
+#image_history .clear{
+    clear:both;
+}

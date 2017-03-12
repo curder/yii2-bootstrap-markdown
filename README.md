@@ -42,6 +42,8 @@ Or Use ActiveForm
             'row' => 12,
             'language' => 'zh',
             'useImageUpload' => true, // use upload file Or image modal
+            'uploadDir' => '@frontend/web/uploads',
+            'uploadUrl' => '@frontend/web/uploads',
             'deleteUrl' => '/markdown/attachment/delete-file',
             'imageAttachmentRoute' => '/markdown/attachment/image-modal',
             'fileAttachmentRoute' => '/markdown/attachment/file-modal',
@@ -53,6 +55,7 @@ Or Use ActiveForm
         ...
     ]); ?>
 ```
+> make dir for yourself to `uploadDir` value.
 
 ## DEMO
 ![demo](https://raw.githubusercontent.com/curder/yii2-bootstrap-markdown/master/demo.jpg "demo")

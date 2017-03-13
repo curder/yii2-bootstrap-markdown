@@ -10,7 +10,7 @@ class MarkdownAsset extends AssetBundle{
     ];
     public $js = [
         'js/bootstrap-markdown.js',
-        'js/markdown.js',
+        'js/markdown.min.js',
         // 'js/upload.js'
     ];
     public $depends = [
